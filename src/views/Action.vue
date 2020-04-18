@@ -1,18 +1,19 @@
 <template>
-  <div class="home">
-    <HelloWorld msg="Portfolio｜作品集 By Jurna Liu" />
+  <div class="action" style="font-size: 0">
+    <el-image
+      src="https://leoyep.oss-cn-shanghai.aliyuncs.com/pic/%E7%89%B9%E6%AE%8A%E4%BD%BF%E5%91%BD.jpg"
+    />
+    <video
+      src="https://leoyep.oss-cn-shanghai.aliyuncs.com/video/%E7%89%B9%E6%AE%8A%E4%BD%BF%E5%91%BD.mp4"
+      style="width: 100%"
+      autoplay
+      controls
+    />
   </div>
 </template>
-
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
 export default {
-  name: "Home",
-  components: {
-    HelloWorld
-  },
+  name: "Action",
   data() {
     return {
       urls: [
@@ -29,7 +30,8 @@ export default {
 };
 </script>
 <style lang="scss">
-.home {
-  padding: 10vh;
+.action {
+  overflow: hidden;
+  margin: 10vw;
 }
 </style>
