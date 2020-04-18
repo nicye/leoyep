@@ -2,11 +2,11 @@
   <div
     ref="app"
     id="app"
-    class="app"
+    :class="[img]"
     :style="{ 'background-image': `url(${bg})` }"
   >
     <transition name="el-fade-in-linear">
-      <img v-if="img" alt="bg logo" class="bg-3d-dep" :src="img" />
+      <!-- <img v-if="img" alt="bg logo" class="bg-3d-dep" :src="img" /> -->
     </transition>
     <div style="text-align: center">
       <img alt="Vue logo" class="logo-img" :src="logo" />
@@ -46,7 +46,7 @@ export default {
         },
         "3d": {
           bg: imgMap.bg3d,
-          imgDep: imgMap.bgFooter
+          class: "yellow"
         }
       },
       fixed: false
@@ -60,7 +60,7 @@ export default {
       return this.bgItem.bg || imgMap.bgHome;
     },
     img() {
-      return this.bgItem.imgDep || "";
+      return this.bgItem.class || "";
     }
   },
   mounted() {
@@ -92,7 +92,7 @@ html {
   background-size: 100vw;
   background-position: 0 0;
   background-repeat: no-repeat;
-  height: 100vh;
+  min-height: 100vh;
   .logo-img {
     width: 60vw;
     margin: 2vw auto 0;
@@ -109,7 +109,9 @@ html {
     z-index: -2;
   }
 }
-
+.yellow {
+  background: rgb(238, 231, 211);
+}
 #nav {
   margin: 0 10vw;
 }
@@ -127,6 +129,7 @@ html {
     }
   }
 }
+
 .nav-fixed-to-top {
   position: fixed;
   top: 0;

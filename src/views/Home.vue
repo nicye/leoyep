@@ -1,6 +1,10 @@
 <template>
   <div class="home">
     <HelloWorld msg="Portfolio｜作品集 By Jurna Liu" />
+    <div>
+      <el-image src="//leoyep.oss-cn-shanghai.aliyuncs.com/pic/fatbi.jpg" />
+    </div>
+    <h1>不，你不是</h1>
   </div>
 </template>
 

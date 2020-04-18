@@ -1,37 +1,154 @@
 <template>
-  <div class="action" style="font-size: 0">
-    <el-image
-      src="https://leoyep.oss-cn-shanghai.aliyuncs.com/pic/%E7%89%B9%E6%AE%8A%E4%BD%BF%E5%91%BD.jpg"
-    />
-    <video
-      src="https://leoyep.oss-cn-shanghai.aliyuncs.com/video/%E7%89%B9%E6%AE%8A%E4%BD%BF%E5%91%BD.mp4"
-      style="width: 100%"
-      autoplay
-      controls
-    />
+  <div>
+    <div class="threed">
+      <div class="threed-item" v-for="(item, idx) in story" :key="item.title">
+        <collection :data="item.data" lazy>
+          <div slot="title" class="threed-item-title" :style="titleStyle(idx)">
+            <div class="cube">
+              <div class="item1 item">{{ item.title }}</div>
+              <div class="item2 item">{{ item.title }}</div>
+              <div class="item3 item">{{ item.title }}</div>
+              <div class="item4 item">{{ item.title }}</div>
+              <div class="item5 item">{{ item.title }}</div>
+              <div class="item6 item">{{ item.title }}</div>
+            </div>
+          </div>
+        </collection>
+      </div>
+    </div>
   </div>
 </template>
 <script>
+import collection from "@/components/collection.vue";
 export default {
-  name: "Action",
+  components: { collection },
   data() {
     return {
-      urls: [
-        "https://fuss10.elemecdn.com/a/3f/3302e58f9a181d2509f3dc0fa68b0jpeg.jpeg",
-        "https://fuss10.elemecdn.com/1/34/19aa98b1fcb2781c4fba33d850549jpeg.jpeg",
-        "https://fuss10.elemecdn.com/0/6f/e35ff375812e6b0020b6b4e8f9583jpeg.jpeg",
-        "https://fuss10.elemecdn.com/9/bb/e27858e973f5d7d3904835f46abbdjpeg.jpeg",
-        "https://fuss10.elemecdn.com/d/e6/c4d93a3805b3ce3f323f7974e6f78jpeg.jpeg",
-        "https://fuss10.elemecdn.com/3/28/bbf893f792f03a54408b3b7a7ebf0jpeg.jpeg",
-        "https://fuss10.elemecdn.com/2/11/6535bcfb26e4c79b48ddde44f4b6fjpeg.jpeg"
+      story: [
+        {
+          title: "3D作品",
+          data: [
+            {
+              type: "image",
+              value:
+                "//leoyep.oss-cn-shanghai.aliyuncs.com/3d/3d1.jpg?x-oss-process=style/water"
+            },
+            {
+              type: "image",
+              value:
+                "//leoyep.oss-cn-shanghai.aliyuncs.com/3d/3d2.jpg?x-oss-process=style/water"
+            },
+            {
+              type: "video",
+              value:
+                "//leoyep.oss-cn-shanghai.aliyuncs.com/3d/1586927989747428.mp4"
+            },
+            {
+              type: "video",
+              value:
+                "//leoyep.oss-cn-shanghai.aliyuncs.com/3d/1586928018648983.mp4"
+            }
+          ]
+        }
       ]
     };
+  },
+
+  methods: {
+    titleStyle() {
+      return {};
+    }
   }
 };
 </script>
-<style lang="scss">
-.action {
-  overflow: hidden;
-  margin: 10vw;
+<style lang="scss" scoped>
+.threed {
+  padding: 0 6vw;
+  &-item {
+    &-title {
+      display: inline-block;
+      margin: 20px 0 10px;
+    }
+  }
+}
+.cube {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: wrap 3s infinite forwards;
+  -webkit-box-shadow: #666 0px 0px 10px;
+  -moz-box-shadow: #666 0px 0px 10px;
+  box-shadow: #666 0px 0px 10px;
+}
+@keyframes wrap {
+  to {
+    transform: rotate3d(1, 1, 1, 360deg);
+  }
+}
+.item {
+  width: 100px;
+  height: 100px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-style: preserve-3d;
+  background: #fff;
+  font-weight: 600;
+}
+.item1 {
+  z-index: 5;
+  animation: item1 1s forwards;
+}
+@keyframes item1 {
+  to {
+    transform-origin: top;
+    transform: rotateX(90deg);
+  }
+}
+.item2 {
+  z-index: 4;
+  animation: item2 1s forwards;
+}
+@keyframes item2 {
+  to {
+    transform-origin: left;
+    transform: rotateY(-90deg);
+  }
+}
+.item3 {
+  z-index: 3;
+  animation: item3 1s forwards;
+}
+@keyframes item3 {
+  to {
+    transform-origin: right;
+    transform: rotateY(90deg);
+  }
+}
+.item4 {
+  z-index: 2;
+  animation: item4 1s forwards;
+}
+@keyframes item4 {
+  to {
+    transform-origin: center bottom;
+    transform: rotateX(-90deg);
+  }
+}
+.item5 {
+  z-index: 1;
+  animation: item5 1s forwards;
+}
+@keyframes item5 {
+  to {
+    transform: translate3d(0, 0, 100px);
+  }
+}
+.item6 {
+  z-index: 0;
 }
 </style>

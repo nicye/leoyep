@@ -83,9 +83,9 @@ export default {
   },
 
   methods: {
-    titleStyle(idex) {
+    titleStyle() {
       const random = Math.random();
-      let deg = (random * 10 + idex) % 7;
+      let deg = random * 20;
       if (random < 0.5) deg *= -1;
       console.log(deg);
       return {
@@ -103,7 +103,7 @@ export default {
 .drawing {
   padding: 0 6vw;
   &-item {
-    margin-bottom: 50px;
+    margin: 50px 0 35px;
     &-title {
       background: #000;
       color: #fff;
@@ -111,6 +111,9 @@ export default {
       margin: 12px 0 8px;
       padding: 8px 12px;
       font-size: 18px;
+      -webkit-box-shadow: #666 0px 0px 10px;
+      -moz-box-shadow: #666 0px 0px 10px;
+      box-shadow: #666 0px 0px 10px;
     }
   }
 }
