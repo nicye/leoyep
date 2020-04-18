@@ -1,19 +1,20 @@
 <template>
-  <div class="my-video-play">
+  <!-- <div class="my-video-play">
     <video-player
       ref="videoPlayer"
       :key="key"
       :playsinline="true"
       :options="options"
     />
-  </div>
+  </div> -->
+  <video ref="video" v-bind="$attrs" />
 </template>
 <script>
-import { videoPlayer } from "vue-video-player";
+// import { videoPlayer } from "vue-video-player";
 // import "vue-video-player/src/custom-theme.css";
 import "video.js/dist/video-js.css";
 export default {
-  components: { videoPlayer },
+  // components: { videoPlayer },
   props: {
     sources: {
       type: Array,
@@ -49,6 +50,22 @@ export default {
           this.key++;
         });
       }
+    }
+  },
+  mounted() {
+    let video = this.$refs.video;
+    if (!video.poster) {
+      var scale = 0.8;
+      var captureImage = () => {
+        var canvas = document.createElement("canvas");
+        canvas.width = video.videoWidth * scale;
+        canvas.height = video.videoHeight * scale;
+        canvas
+          .getContext("2d")
+          .drawImage(video, 0, 0, canvas.width, canvas.height);
+        video.poster = canvas.toDataURL("image/png");
+      };
+      video.addEventListener("loadeddata", captureImage);
     }
   }
 };

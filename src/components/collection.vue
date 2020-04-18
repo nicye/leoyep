@@ -9,15 +9,16 @@
         :src="item.value"
         lazy
       />
-      <video
+      <video-player
         v-else-if="item.type == 'video'"
-        preload="auto"
         :key="item.value"
         :src="item.value"
-        :sources="[{ type: 'video/mp4', src: item.value }]"
+        preload="auto"
         style="width: 100%"
+        type="video/mp4"
+        crossorigin="use-credentials"
         controls
-      ></video>
+      ></video-player>
       <picture-player
         v-else-if="item.type == 'imageList'"
         :key="item.value[0] || 0"
@@ -28,8 +29,9 @@
 </template>
 <script>
 import picturePlayer from "@/components/picture-player.vue";
+import videoPlayer from "./video-player";
 export default {
-  components: { picturePlayer },
+  components: { picturePlayer, videoPlayer },
   props: {
     title: {
       type: String,

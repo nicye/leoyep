@@ -1,9 +1,9 @@
 <template>
   <div id="app" class="app" :style="{ 'background-image': `url(${bg})` }">
+    <img v-if="img" alt="bg logo" class="bg-action-dep" :src="img" />
     <div style="text-align: center">
       <img alt="Vue logo" class="logo-img" :src="logo" />
     </div>
-    <img v-if="img" alt="bg logo" class="bg-action-dep" :src="img" />
     <div id="nav">
       <router-link to="/">首页</router-link>
       <router-link to="/project">项目</router-link>
