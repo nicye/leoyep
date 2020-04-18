@@ -1,16 +1,29 @@
 <template>
-  <div id="app" class="app" :style="{ 'background-image': `url(${bg})` }">
-    <img v-if="img" alt="bg logo" class="bg-action-dep" :src="img" />
+  <div
+    ref="app"
+    id="app"
+    class="app"
+    :style="{ 'background-image': `url(${bg})` }"
+  >
+    <transition name="el-fade-in-linear">
+      <img v-if="img" alt="bg logo" class="bg-action-dep" :src="img" />
+    </transition>
     <div style="text-align: center">
       <img alt="Vue logo" class="logo-img" :src="logo" />
     </div>
-    <div id="nav">
-      <router-link to="/">首页</router-link>
-      <router-link to="/project">项目</router-link>
-      <router-link to="/action">绘图</router-link>
-      <router-link to="/3d">3D</router-link>
-    </div>
-    <transition name="slide-right">
+    <transition name="el-fade-in-linear">
+      <div ref="nav" id="nav">
+        <div :class="{ 'nav-fixed-to-top': fixed, nav: true }">
+          <router-link to="/">首页</router-link>
+          <router-link to="/project">项目</router-link>
+          <router-link to="/action">绘图</router-link>
+          <router-link to="/3d">3D</router-link>
+        </div>
+      </div>
+    </transition>
+    <el-backtop :right="0" :bottom="150"></el-backtop>
+
+    <transition name="el-fade-in">
       <router-view></router-view>
     </transition>
   </div>
@@ -25,6 +38,7 @@ const imgMap = {
 export default {
   data() {
     return {
+      cc: 0,
       logo: imgMap.logo,
       bgMap: {
         Home: {
@@ -34,7 +48,8 @@ export default {
           bg: imgMap.bg3d,
           imgDep: imgMap.bgFooter
         }
-      }
+      },
+      fixed: false
     };
   },
   computed: {
@@ -47,6 +62,21 @@ export default {
     img() {
       return this.bgItem.imgDep || "";
     }
+  },
+  mounted() {
+    const toTop = () => {
+      if (
+        this.$refs.nav.offsetTop -
+          (document.documentElement.scrollTop || document.body.scrollTop) <=
+        0
+      ) {
+        this.fixed = true;
+      } else {
+        this.fixed = false;
+      }
+    };
+    toTop();
+    window.addEventListener("scroll", toTop);
   }
 };
 </script>
@@ -81,15 +111,39 @@ html {
 }
 
 #nav {
-  padding: 10px;
-  background: #fff;
   margin: 0 10vw;
+}
+.nav {
+  background: #fff;
+  padding: 10px;
   display: flex;
   justify-content: center;
+  align-items: center;
   a {
     font-weight: bold;
     color: #2c3e50;
     margin: 0 10px;
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
+}
+.nav-fixed-to-top {
+  position: fixed;
+  top: 0;
+  // left: 10vw;
+  // right: 10vw;
+  z-index: 999;
+  flex-direction: column;
+  border-radius: 30px;
+  right: 0;
+  height: 40vh;
+  top: 20vh;
+  width: 32px;
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 10px 0px;
     &.router-link-exact-active {
       color: #42b983;
     }

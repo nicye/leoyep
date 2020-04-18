@@ -1,11 +1,10 @@
 <template>
-  <div class="storyboard">
-    <div>
+  <div>
+    <div class="project" v-for="item in story" :key="item.title">
       <collection
-        v-for="item in story"
-        :key="item.title"
         :title="item.title"
-        :data="item.data"
+        :data="[item.data[0]]"
+        @click.native="handleWorks(item)"
       />
     </div>
   </div>
@@ -15,7 +14,7 @@
 // @ is an alias to /src
 import collection from "@/components/collection.vue";
 export default {
-  name: "Storyboard",
+  name: "project",
   components: {
     // videoPlayer,
     collection
@@ -28,83 +27,48 @@ export default {
           data: [
             {
               type: "image",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/dxjt/dxjt1.png"
-            },
-            {
-              type: "image",
               value: "//leoyep.oss-cn-shanghai.aliyuncs.com/dxjt/dxjt2.png"
             },
             {
               type: "image",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/dxjt/dxjt3.png"
+              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/dxjt/dxjt1.png"
             },
             {
               type: "video",
               value: "//leoyep.oss-cn-shanghai.aliyuncs.com/dxjt/dxjt.mp4" // url地址
+            },
+            {
+              type: "image",
+              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/dxjt/dxjt3.png"
             }
           ]
         },
         {
-          title: "偶遇",
+          title: "神墙的故事",
           data: [
             {
               type: "image",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/ouyu/ouyu.jpg"
+              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/sqd/sqd.jpg"
             },
-            {
-              type: "video",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/ouyu/ouyu1.mp4"
-            },
-            {
-              type: "video",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/ouyu/ouyu2.mp4"
-            }
-          ]
-        },
-        {
-          title: "特殊使命",
-          data: [
             {
               type: "image",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/tes.jpg"
+              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/sqd/sqd2.jpg"
             },
-            {
-              type: "video",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/tes1.mp4" // url地址
-            },
-            {
-              type: "imageList",
-              value: [
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/sketch4-1-1.jpg",
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/sketch4-1-2.jpg",
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/sketch4-1-3.jpg",
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/sketch4-1-4.jpg",
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/sketch4-1-5.jpg",
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/sketch4-1-6.jpg",
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/sketch4-1-7.jpg"
-              ]
-            },
-            {
-              type: "video", // 类型
-              src: "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/tes2.mp4"
-            },
-            {
-              type: "video", // 类型
-              src: "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/tes3.mp4"
-            }
-          ]
-        },
-        {
-          title: "天将神龙",
-          data: [
             {
               type: "image",
-              value:
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/tjsl/%E6%9C%AA%E6%A0%87%E9%A2%98-1.jpg"
+              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/sqd/sqd3.jpg"
             },
             {
-              type: "video",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/tjsl/tjsl.mp4"
+              type: "image",
+              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/sqd/sqd4.jpg"
+            },
+            {
+              type: "image",
+              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/sqd/sqd5.jpg"
+            },
+            {
+              type: "image",
+              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/sqd/sqd6.jpg"
             }
           ]
         },
@@ -121,19 +85,7 @@ export default {
             }
           ]
         },
-        {
-          title: "不会忘记",
-          data: [
-            {
-              type: "image",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/grandma/grandma.jpg"
-            },
-            {
-              type: "video",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/grandma/grandma.mp4" // url地址
-            }
-          ]
-        },
+
         {
           title: "Fight",
           data: [
@@ -171,33 +123,81 @@ export default {
             }
           ]
         },
-
         {
-          title: "神墙的故事",
+          title: "特殊使命",
           data: [
             {
               type: "image",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/sqd/sqd.jpg"
+              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/tes.jpg"
             },
             {
-              type: "image",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/sqd/sqd2.jpg"
+              type: "video",
+              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/tes1.mp4" // url地址
             },
             {
-              type: "image",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/sqd/sqd3.jpg"
+              type: "imageList",
+              value: [
+                "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/sketch4-1-1.jpg",
+                "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/sketch4-1-2.jpg",
+                "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/sketch4-1-3.jpg",
+                "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/sketch4-1-4.jpg",
+                "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/sketch4-1-5.jpg",
+                "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/sketch4-1-6.jpg",
+                "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/sketch4-1-7.jpg"
+              ]
             },
             {
-              type: "image",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/sqd/sqd4.jpg"
+              type: "video", // 类型
+              src: "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/tes2.mp4"
             },
             {
-              type: "image",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/sqd/sqd5.jpg"
-            },
+              type: "video", // 类型
+              src: "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/tes3.mp4"
+            }
+          ]
+        },
+        {
+          title: "不会忘记",
+          data: [
             {
               type: "image",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/sqd/sqd6.jpg"
+              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/grandma/grandma.jpg"
+            },
+            {
+              type: "video",
+              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/grandma/grandma.mp4" // url地址
+            }
+          ]
+        },
+        {
+          title: "偶遇",
+          data: [
+            {
+              type: "image",
+              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/ouyu/ouyu.jpg"
+            },
+            {
+              type: "video",
+              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/ouyu/ouyu1.mp4"
+            },
+            {
+              type: "video",
+              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/ouyu/ouyu2.mp4"
+            }
+          ]
+        },
+
+        {
+          title: "天将神龙",
+          data: [
+            {
+              type: "image",
+              value:
+                "//leoyep.oss-cn-shanghai.aliyuncs.com/tjsl/%E6%9C%AA%E6%A0%87%E9%A2%98-1.jpg"
+            },
+            {
+              type: "video",
+              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/tjsl/tjsl.mp4"
             }
           ]
         },
@@ -216,15 +216,24 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    handleWorks(works) {
+      const navTop = document.querySelector("#nav").offsetTop;
+      document.documentElement.scrollTop = navTop;
+      document.body.scrollTop = navTop;
+      window.sessionStorage.setItem("LEO_WORKS_PIESE", JSON.stringify(works));
+      this.$router.push("/works");
+    }
   }
 };
 </script>
 <style lang="scss">
-.storyboard {
+.project {
   overflow: hidden;
   border: 1rem solid #000;
   border-radius: 10px;
-  margin: 50px 8vw;
+  margin: 50px 10vw;
   background: #000;
   &-title {
     padding: 0.8rem 0 0.3rem;

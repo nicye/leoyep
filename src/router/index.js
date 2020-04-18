@@ -2,7 +2,8 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Action from "../views/Action.vue";
-import Storyboard from "../views/storyboard.vue";
+import project from "../views/project.vue";
+import works from "../views/works.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -19,10 +20,12 @@ const routes = [
   {
     path: "/project",
     name: "Project",
-    component: Storyboard
+    component: project
   },
   {
-    path: "/"
+    path: "/works",
+    name: "works",
+    component: works
   }
 ];
 

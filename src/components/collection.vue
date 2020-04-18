@@ -7,7 +7,6 @@
         :key="item.value"
         style="width: 100%"
         :src="item.value"
-        lazy
       />
       <video-player
         v-else-if="item.type == 'video'"
