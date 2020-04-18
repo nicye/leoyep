@@ -1,12 +1,17 @@
 <template>
   <div class="collention">
-    <div class="collention-title">{{ title }}</div>
+    <slot name="title">
+      <div class="collention-title">
+        {{ title }}
+      </div>
+    </slot>
     <template v-for="item in data">
       <el-image
         v-if="item.type == 'image'"
         :key="item.value"
         style="width: 100%"
         :src="item.value"
+        :lazy="lazy"
       />
       <video-player
         v-else-if="item.type == 'video'"
@@ -22,6 +27,7 @@
         v-else-if="item.type == 'imageList'"
         :key="item.value[0] || 0"
         :srcs="item.value"
+        :lazy="lazy"
       />
     </template>
   </div>
@@ -39,6 +45,10 @@ export default {
     data: {
       type: Array,
       default: () => []
+    },
+    lazy: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
@@ -48,7 +58,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .collention {
-  background: #000;
   &-title {
     font-family: "PingFang SC";
     letter-spacing: 2px;

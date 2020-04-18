@@ -6,7 +6,7 @@
     :style="{ 'background-image': `url(${bg})` }"
   >
     <transition name="el-fade-in-linear">
-      <img v-if="img" alt="bg logo" class="bg-action-dep" :src="img" />
+      <img v-if="img" alt="bg logo" class="bg-3d-dep" :src="img" />
     </transition>
     <div style="text-align: center">
       <img alt="Vue logo" class="logo-img" :src="logo" />
@@ -16,8 +16,8 @@
         <div :class="{ 'nav-fixed-to-top': fixed, nav: true }">
           <router-link to="/">首页</router-link>
           <router-link to="/project">项目</router-link>
-          <router-link to="/action">绘图</router-link>
-          <router-link to="/3d">3D</router-link>
+          <router-link to="/drawing">绘图</router-link>
+          <router-link to="/3d">三维</router-link>
         </div>
       </div>
     </transition>
@@ -98,7 +98,7 @@ html {
     margin: 2vw auto 0;
   }
 
-  .bg-action-dep {
+  .bg-3d-dep {
     width: 100vw;
     height: 100%;
     position: fixed;
@@ -117,12 +117,11 @@ html {
   background: #fff;
   padding: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   a {
     font-weight: bold;
     color: #2c3e50;
-    margin: 0 10px;
     &.router-link-exact-active {
       color: #42b983;
     }

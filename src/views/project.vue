@@ -1,11 +1,12 @@
 <template>
-  <div>
-    <div class="project" v-for="item in story" :key="item.title">
-      <collection
-        :title="item.title"
-        :data="[item.data[0]]"
-        @click.native="handleWorks(item)"
-      />
+  <div class="project">
+    <div
+      class="project-item"
+      v-for="item in story"
+      :key="item.title"
+      @click="handleWorks(item)"
+    >
+      <collection :title="item.title" :data="[item.data[0]]" />
     </div>
   </div>
 </template>
@@ -27,11 +28,13 @@ export default {
           data: [
             {
               type: "image",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/dxjt/dxjt2.png"
+              value:
+                "//leoyep.oss-cn-shanghai.aliyuncs.com/dxjt/dxjt2.png?x-oss-process=style/water"
             },
             {
               type: "image",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/dxjt/dxjt1.png"
+              value:
+                "//leoyep.oss-cn-shanghai.aliyuncs.com/dxjt/dxjt1.png?x-oss-process=style/water"
             },
             {
               type: "video",
@@ -39,7 +42,8 @@ export default {
             },
             {
               type: "image",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/dxjt/dxjt3.png"
+              value:
+                "//leoyep.oss-cn-shanghai.aliyuncs.com/dxjt/dxjt3.png?x-oss-process=style/water"
             }
           ]
         },
@@ -116,10 +120,6 @@ export default {
                 "//leoyep.oss-cn-shanghai.aliyuncs.com/flight/ketchs-1-14.jpg",
                 "//leoyep.oss-cn-shanghai.aliyuncs.com/flight/ketchs-1-15.jpg"
               ] // url地址
-            },
-            {
-              type: "video",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/flight/flight2.mp4" // url地址
             }
           ]
         },
@@ -148,11 +148,11 @@ export default {
             },
             {
               type: "video", // 类型
-              src: "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/tes2.mp4"
+              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/tes2.mp4"
             },
             {
               type: "video", // 类型
-              src: "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/tes3.mp4"
+              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/tes3.mp4"
             }
           ]
         },
@@ -230,16 +230,18 @@ export default {
 </script>
 <style lang="scss">
 .project {
-  overflow: hidden;
-  border: 1rem solid #000;
-  border-radius: 10px;
-  margin: 50px 10vw;
-  background: #000;
-  &-title {
-    padding: 0.8rem 0 0.3rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #fff;
+  &-item {
+    overflow: hidden;
+    border: 1rem solid #000;
+    border-radius: 10px;
+    margin: 50px 10vw;
+    background: #000;
+    &-title {
+      padding: 0.8rem 0 0.3rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #fff;
+    }
   }
 }
 </style>
