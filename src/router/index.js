@@ -12,8 +12,8 @@ const routes = [
     component: Home
   },
   {
-    path: "/action",
-    name: "Action",
+    path: "/3d",
+    name: "3d",
     component: Action
   },
   {

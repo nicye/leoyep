@@ -31,5 +31,6 @@ export default {
 <style lang="scss">
 .home {
   padding: 10vh;
+  text-align: center;
 }
 </style>

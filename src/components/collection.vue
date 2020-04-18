@@ -51,11 +51,15 @@ export default {
   &-title {
     font-family: "PingFang SC";
     letter-spacing: 2px;
-    color: #fff;
+    background: #fff;
+    border-radius: 10px;
     font-size: 18px;
     font-weight: 600;
     height: 2.2rem;
     line-height: 2.2rem;
+    display: inline-block;
+    margin: 5px;
+    padding: 0 10px;
   }
 }
 </style>

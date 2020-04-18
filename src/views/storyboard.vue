@@ -24,7 +24,28 @@ export default {
     return {
       story: [
         {
-          title: "《偶遇》",
+          title: "大相径庭",
+          data: [
+            {
+              type: "image",
+              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/dxjt/dxjt1.png"
+            },
+            {
+              type: "image",
+              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/dxjt/dxjt2.png"
+            },
+            {
+              type: "image",
+              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/dxjt/dxjt3.png"
+            },
+            {
+              type: "video",
+              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/dxjt/dxjt.mp4" // url地址
+            }
+          ]
+        },
+        {
+          title: "偶遇",
           data: [
             {
               type: "image",
@@ -41,7 +62,7 @@ export default {
           ]
         },
         {
-          title: "《特殊使命》",
+          title: "特殊使命",
           data: [
             {
               type: "image",
@@ -74,7 +95,7 @@ export default {
           ]
         },
         {
-          title: "《天将神龙》",
+          title: "天将神龙",
           data: [
             {
               type: "image",
@@ -88,7 +109,7 @@ export default {
           ]
         },
         {
-          title: "《car》",
+          title: "car",
           data: [
             {
               type: "image",
@@ -101,7 +122,7 @@ export default {
           ]
         },
         {
-          title: "《不会忘记》",
+          title: "不会忘记",
           data: [
             {
               type: "image",
@@ -114,7 +135,7 @@ export default {
           ]
         },
         {
-          title: "《Fight》",
+          title: "Fight",
           data: [
             {
               type: "image",
@@ -150,29 +171,9 @@ export default {
             }
           ]
         },
+
         {
-          title: "《大相径庭》",
-          data: [
-            {
-              type: "image",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/dxjt/dxjt1.png"
-            },
-            {
-              type: "image",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/dxjt/dxjt2.png"
-            },
-            {
-              type: "image",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/dxjt/dxjt3.png"
-            },
-            {
-              type: "video",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/dxjt/dxjt.mp4" // url地址
-            }
-          ]
-        },
-        {
-          title: "《神墙的故事》",
+          title: "神墙的故事",
           data: [
             {
               type: "image",
