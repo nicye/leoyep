@@ -2,7 +2,7 @@
   <div>
     <div class="drawing">
       <div class="drawing-item" v-for="(item, idx) in story" :key="item.title">
-        <collection :data="item.data" lazy>
+        <collection :data="item.data">
           <div slot="title" class="drawing-item-title" :style="titleStyle(idx)">
             {{ item.title }}
           </div>

@@ -4,10 +4,28 @@
       class="project-item"
       v-for="item in story"
       :key="item.title"
-      @click="handleWorks(item)"
+      @click="handleWorks($event, item)"
     >
       <collection :title="item.title" :data="[item.data[0]]" />
     </div>
+    <el-dialog
+      custom-class="works-dialog"
+      :visible.sync="dialogVisible"
+      destroy-on-close
+      fullscreen
+    >
+      <div class="works">
+        <collection :title="works.title" :data="works.data" />
+        <div
+          class="el-backtop"
+          style="right: 0px; bottom: 250px;"
+          @click="dialogVisible = false"
+        >
+          <i class="el-icon-caret-left"></i>
+        </div>
+        <el-backtop :right="0" :bottom="150" target=".works"></el-backtop>
+      </div>
+    </el-dialog>
   </div>
 </template>
 
@@ -22,6 +40,7 @@ export default {
   },
   data() {
     return {
+      dialogVisible: false,
       story: [
         {
           title: "大相径庭",
@@ -214,16 +233,22 @@ export default {
             }
           ]
         }
-      ]
+      ],
+      works: {}
     };
   },
   methods: {
-    handleWorks(works) {
-      const navTop = document.querySelector("#nav").offsetTop;
-      document.documentElement.scrollTop = navTop;
-      document.body.scrollTop = navTop;
-      window.sessionStorage.setItem("LEO_WORKS_PIESE", JSON.stringify(works));
-      this.$router.push("/works");
+    handleWorks($event, works) {
+      window.sessionStorage.setItem(
+        "LEO_WORKS_PIESE",
+        JSON.stringify({
+          ...works
+        })
+      );
+      this.works = works;
+      this.dialogVisible = true;
+
+      // this.$router.push("/works");
     }
   }
 };
@@ -241,6 +266,20 @@ export default {
       font-size: 1.2rem;
       font-weight: 600;
       color: #fff;
+    }
+  }
+  .works-dialog {
+    .works {
+      background: #000;
+      padding: 0 10vw;
+      height: 100%;
+      overflow-y: auto;
+    }
+    .el-dialog__header {
+      padding: 0;
+    }
+    .el-dialog__body {
+      padding: 0;
     }
   }
 }

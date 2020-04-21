@@ -12,7 +12,11 @@
         style="width: 100%"
         :src="item.value"
         :lazy="lazy"
-      />
+      >
+        <div slot="placeholder" class="collention-image-slot">
+          loading<span class="dot el-icon-loading"></span>
+        </div>
+      </el-image>
       <video-player
         v-else-if="item.type == 'video'"
         :key="item.value"
@@ -70,6 +74,13 @@ export default {
     display: inline-block;
     margin: 5px;
     padding: 0 10px;
+  }
+  &-image-slot {
+    width: 100%;
+    text-align: center;
+    min-height: 10rem;
+    line-height: 10rem;
+    background: #f5f7fa;
   }
 }
 </style>

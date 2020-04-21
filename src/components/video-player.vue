@@ -58,8 +58,8 @@ export default {
       var scale = 0.8;
       var captureImage = () => {
         var canvas = document.createElement("canvas");
-        canvas.width = video.videoWidth * scale;
-        canvas.height = video.videoHeight * scale;
+        canvas.width = video.clientWidth * scale;
+        canvas.height = video.clientHeight * scale;
         canvas
           .getContext("2d")
           .drawImage(video, 0, 0, canvas.width, canvas.height);

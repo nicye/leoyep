@@ -5,9 +5,7 @@
     :class="[img]"
     :style="{ 'background-image': `url(${bg})` }"
   >
-    <transition name="el-fade-in-linear">
-      <!-- <img v-if="img" alt="bg logo" class="bg-3d-dep" :src="img" /> -->
-    </transition>
+    <transition name="el-fade-in-linear"> </transition>
     <div style="text-align: center">
       <img alt="Vue logo" class="logo-img" :src="logo" />
     </div>
@@ -23,9 +21,11 @@
     </transition>
     <el-backtop :right="0" :bottom="150"></el-backtop>
 
-    <transition name="el-fade-in">
-      <router-view></router-view>
-    </transition>
+    <keep-alive>
+      <transition name="el-fade-in">
+        <router-view></router-view>
+      </transition>
+    </keep-alive>
   </div>
 </template>
 <script>
@@ -64,25 +64,28 @@ export default {
     }
   },
   mounted() {
-    const toTop = () => {
-      if (
-        this.$refs.nav.offsetTop -
-          (document.documentElement.scrollTop || document.body.scrollTop) <=
-        0
-      ) {
-        this.fixed = true;
-      } else {
-        this.fixed = false;
-      }
-    };
-    toTop();
-    window.addEventListener("scroll", toTop);
+    // const toTop = () => {
+    //   if (
+    //     this.$refs.nav.offsetTop -
+    //       (document.documentElement.scrollTop || document.body.scrollTop) <=
+    //     0
+    //   ) {
+    //     this.fixed = true;
+    //   } else {
+    //     this.fixed = false;
+    //   }
+    // };
+    // toTop();
+    // window.addEventListener("scroll", toTop);
   }
 };
 </script>
 <style lang="scss">
 html {
   font-size: 16px;
+}
+body {
+  min-height: 100%;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

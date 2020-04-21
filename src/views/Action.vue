@@ -2,16 +2,9 @@
   <div>
     <div class="threed">
       <div class="threed-item" v-for="(item, idx) in story" :key="item.title">
-        <collection :data="item.data" lazy>
+        <collection :data="item.data">
           <div slot="title" class="threed-item-title" :style="titleStyle(idx)">
-            <div class="cube">
-              <div class="item1 item">{{ item.title }}</div>
-              <div class="item2 item">{{ item.title }}</div>
-              <div class="item3 item">{{ item.title }}</div>
-              <div class="item4 item">{{ item.title }}</div>
-              <div class="item5 item">{{ item.title }}</div>
-              <div class="item6 item">{{ item.title }}</div>
-            </div>
+            {{ item.title }}
           </div>
         </collection>
       </div>
@@ -61,94 +54,22 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 .threed {
   padding: 0 6vw;
   &-item {
     &-title {
       display: inline-block;
       margin: 20px 0 10px;
+      background: #fff;
+      font-weight: 600;
+      -webkit-box-shadow: #666 0px 0px 10px;
+      -moz-box-shadow: #666 0px 0px 10px;
+      box-shadow: #666 0px 0px 10px;
+      margin: 12px 0 8px;
+      padding: 8px 12px;
+      font-size: 18px;
     }
   }
-}
-.cube {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  transform-style: preserve-3d;
-  animation: wrap 3s infinite forwards;
-  -webkit-box-shadow: #666 0px 0px 10px;
-  -moz-box-shadow: #666 0px 0px 10px;
-  box-shadow: #666 0px 0px 10px;
-}
-@keyframes wrap {
-  to {
-    transform: rotate3d(1, 1, 1, 360deg);
-  }
-}
-.item {
-  width: 100px;
-  height: 100px;
-  font-size: 16px;
-  text-align: center;
-  line-height: 100px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform-style: preserve-3d;
-  background: #fff;
-  font-weight: 600;
-}
-.item1 {
-  z-index: 5;
-  animation: item1 1s forwards;
-}
-@keyframes item1 {
-  to {
-    transform-origin: top;
-    transform: rotateX(90deg);
-  }
-}
-.item2 {
-  z-index: 4;
-  animation: item2 1s forwards;
-}
-@keyframes item2 {
-  to {
-    transform-origin: left;
-    transform: rotateY(-90deg);
-  }
-}
-.item3 {
-  z-index: 3;
-  animation: item3 1s forwards;
-}
-@keyframes item3 {
-  to {
-    transform-origin: right;
-    transform: rotateY(90deg);
-  }
-}
-.item4 {
-  z-index: 2;
-  animation: item4 1s forwards;
-}
-@keyframes item4 {
-  to {
-    transform-origin: center bottom;
-    transform: rotateX(-90deg);
-  }
-}
-.item5 {
-  z-index: 1;
-  animation: item5 1s forwards;
-}
-@keyframes item5 {
-  to {
-    transform: translate3d(0, 0, 100px);
-  }
-}
-.item6 {
-  z-index: 0;
 }
 </style>

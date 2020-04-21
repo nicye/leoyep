@@ -4,7 +4,6 @@ import Home from "../views/Home.vue";
 import Action from "../views/Action.vue";
 import drawing from "../views/drawing.vue";
 import project from "../views/project.vue";
-import works from "../views/works.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -27,11 +26,6 @@ const routes = [
     path: "/drawing",
     name: "drawing",
     component: drawing
-  },
-  {
-    path: "/works",
-    name: "works",
-    component: works
   }
 ];
 
