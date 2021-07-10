@@ -48,21 +48,21 @@ export default {
             {
               type: "image",
               value:
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/dxjt/dxjt2.png?x-oss-process=style/water"
+                "//leoyep.oss-accelerate.aliyuncs.com/dxjt/dxjt2.png?x-oss-process=style/water"
             },
             {
               type: "image",
               value:
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/dxjt/dxjt1.png?x-oss-process=style/water"
+                "//leoyep.oss-accelerate.aliyuncs.com/dxjt/dxjt1.png?x-oss-process=style/water"
             },
             {
               type: "video",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/dxjt/dxjt.mp4" // url地址
+              value: "//leoyep.oss-accelerate.aliyuncs.com/dxjt/dxjt.mp4" // url地址
             },
             {
               type: "image",
               value:
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/dxjt/dxjt3.png?x-oss-process=style/water"
+                "//leoyep.oss-accelerate.aliyuncs.com/dxjt/dxjt3.png?x-oss-process=style/water"
             }
           ]
         },
@@ -71,27 +71,27 @@ export default {
           data: [
             {
               type: "image",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/sqd/sqd.jpg"
+              value: "//leoyep.oss-accelerate.aliyuncs.com/sqd/sqd.jpg"
             },
             {
               type: "image",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/sqd/sqd2.jpg"
+              value: "//leoyep.oss-accelerate.aliyuncs.com/sqd/sqd2.jpg"
             },
             {
               type: "image",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/sqd/sqd3.jpg"
+              value: "//leoyep.oss-accelerate.aliyuncs.com/sqd/sqd3.jpg"
             },
             {
               type: "image",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/sqd/sqd4.jpg"
+              value: "//leoyep.oss-accelerate.aliyuncs.com/sqd/sqd4.jpg"
             },
             {
               type: "image",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/sqd/sqd5.jpg"
+              value: "//leoyep.oss-accelerate.aliyuncs.com/sqd/sqd5.jpg"
             },
             {
               type: "image",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/sqd/sqd6.jpg"
+              value: "//leoyep.oss-accelerate.aliyuncs.com/sqd/sqd6.jpg"
             }
           ]
         },
@@ -100,11 +100,11 @@ export default {
           data: [
             {
               type: "image",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/car/car.jpg"
+              value: "//leoyep.oss-accelerate.aliyuncs.com/car/car.jpg"
             },
             {
               type: "video",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/car/carmusic.mp4" // url地址
+              value: "//leoyep.oss-accelerate.aliyuncs.com/car/carmusic.mp4" // url地址
             }
           ]
         },
@@ -114,30 +114,30 @@ export default {
           data: [
             {
               type: "image",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/flight/Fight.jpg"
+              value: "//leoyep.oss-accelerate.aliyuncs.com/flight/Fight.jpg"
             },
             {
               type: "video",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/flight/flight.mp4" // url地址
+              value: "//leoyep.oss-accelerate.aliyuncs.com/flight/flight.mp4" // url地址
             },
             {
               type: "imageList",
               value: [
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/flight/ketchs-1-01.jpg",
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/flight/ketchs-1-02.jpg",
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/flight/ketchs-1-03.jpg",
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/flight/ketchs-1-04.jpg",
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/flight/ketchs-1-05.jpg",
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/flight/ketchs-1-06.jpg",
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/flight/ketchs-1-07.jpg",
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/flight/ketchs-1-08.jpg",
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/flight/ketchs-1-09.jpg",
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/flight/ketchs-1-10.jpg",
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/flight/ketchs-1-11.jpg",
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/flight/ketchs-1-12.jpg",
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/flight/ketchs-1-13.jpg",
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/flight/ketchs-1-14.jpg",
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/flight/ketchs-1-15.jpg"
+                "//leoyep.oss-accelerate.aliyuncs.com/flight/ketchs-1-01.jpg",
+                "//leoyep.oss-accelerate.aliyuncs.com/flight/ketchs-1-02.jpg",
+                "//leoyep.oss-accelerate.aliyuncs.com/flight/ketchs-1-03.jpg",
+                "//leoyep.oss-accelerate.aliyuncs.com/flight/ketchs-1-04.jpg",
+                "//leoyep.oss-accelerate.aliyuncs.com/flight/ketchs-1-05.jpg",
+                "//leoyep.oss-accelerate.aliyuncs.com/flight/ketchs-1-06.jpg",
+                "//leoyep.oss-accelerate.aliyuncs.com/flight/ketchs-1-07.jpg",
+                "//leoyep.oss-accelerate.aliyuncs.com/flight/ketchs-1-08.jpg",
+                "//leoyep.oss-accelerate.aliyuncs.com/flight/ketchs-1-09.jpg",
+                "//leoyep.oss-accelerate.aliyuncs.com/flight/ketchs-1-10.jpg",
+                "//leoyep.oss-accelerate.aliyuncs.com/flight/ketchs-1-11.jpg",
+                "//leoyep.oss-accelerate.aliyuncs.com/flight/ketchs-1-12.jpg",
+                "//leoyep.oss-accelerate.aliyuncs.com/flight/ketchs-1-13.jpg",
+                "//leoyep.oss-accelerate.aliyuncs.com/flight/ketchs-1-14.jpg",
+                "//leoyep.oss-accelerate.aliyuncs.com/flight/ketchs-1-15.jpg"
               ] // url地址
             }
           ]
@@ -147,31 +147,31 @@ export default {
           data: [
             {
               type: "image",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/tes.jpg"
+              value: "//leoyep.oss-accelerate.aliyuncs.com/tes/tes.jpg"
             },
             {
               type: "video",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/tes1.mp4" // url地址
+              value: "//leoyep.oss-accelerate.aliyuncs.com/tes/tes1.mp4" // url地址
             },
             {
               type: "imageList",
               value: [
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/sketch4-1-1.jpg",
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/sketch4-1-2.jpg",
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/sketch4-1-3.jpg",
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/sketch4-1-4.jpg",
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/sketch4-1-5.jpg",
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/sketch4-1-6.jpg",
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/sketch4-1-7.jpg"
+                "//leoyep.oss-accelerate.aliyuncs.com/tes/sketch4-1-1.jpg",
+                "//leoyep.oss-accelerate.aliyuncs.com/tes/sketch4-1-2.jpg",
+                "//leoyep.oss-accelerate.aliyuncs.com/tes/sketch4-1-3.jpg",
+                "//leoyep.oss-accelerate.aliyuncs.com/tes/sketch4-1-4.jpg",
+                "//leoyep.oss-accelerate.aliyuncs.com/tes/sketch4-1-5.jpg",
+                "//leoyep.oss-accelerate.aliyuncs.com/tes/sketch4-1-6.jpg",
+                "//leoyep.oss-accelerate.aliyuncs.com/tes/sketch4-1-7.jpg"
               ]
             },
             {
               type: "video", // 类型
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/tes2.mp4"
+              value: "//leoyep.oss-accelerate.aliyuncs.com/tes/tes2.mp4"
             },
             {
               type: "video", // 类型
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/tes/tes3.mp4"
+              value: "//leoyep.oss-accelerate.aliyuncs.com/tes/tes3.mp4"
             }
           ]
         },
@@ -180,11 +180,11 @@ export default {
           data: [
             {
               type: "image",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/grandma/grandma.jpg"
+              value: "//leoyep.oss-accelerate.aliyuncs.com/grandma/grandma.jpg"
             },
             {
               type: "video",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/grandma/grandma.mp4" // url地址
+              value: "//leoyep.oss-accelerate.aliyuncs.com/grandma/grandma.mp4" // url地址
             }
           ]
         },
@@ -193,15 +193,15 @@ export default {
           data: [
             {
               type: "image",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/ouyu/ouyu.jpg"
+              value: "//leoyep.oss-accelerate.aliyuncs.com/ouyu/ouyu.jpg"
             },
             {
               type: "video",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/ouyu/ouyu1.mp4"
+              value: "//leoyep.oss-accelerate.aliyuncs.com/ouyu/ouyu1.mp4"
             },
             {
               type: "video",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/ouyu/ouyu2.mp4"
+              value: "//leoyep.oss-accelerate.aliyuncs.com/ouyu/ouyu2.mp4"
             }
           ]
         },
@@ -212,11 +212,11 @@ export default {
             {
               type: "image",
               value:
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/tjsl/%E6%9C%AA%E6%A0%87%E9%A2%98-1.jpg"
+                "//leoyep.oss-accelerate.aliyuncs.com/tjsl/%E6%9C%AA%E6%A0%87%E9%A2%98-1.jpg"
             },
             {
               type: "video",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/tjsl/tjsl.mp4"
+              value: "//leoyep.oss-accelerate.aliyuncs.com/tjsl/tjsl.mp4"
             }
           ]
         },
@@ -225,11 +225,11 @@ export default {
           data: [
             {
               type: "image",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/others/others.jpg"
+              value: "//leoyep.oss-accelerate.aliyuncs.com/others/others.jpg"
             },
             {
               type: "video",
-              value: "//leoyep.oss-cn-shanghai.aliyuncs.com/others/others.mp4"
+              value: "//leoyep.oss-accelerate.aliyuncs.com/others/others.mp4"
             }
           ]
         }

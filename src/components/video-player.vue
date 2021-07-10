@@ -34,7 +34,7 @@ export default {
         language: "zh-CN",
         sources: this.sources,
         // poster:
-        //   "//leoyep.oss-cn-shanghai.aliyuncs.com/pic/%E7%89%B9%E6%AE%8A%E4%BD%BF%E5%91%BD.jpg",
+        //   "//leoyep.oss-accelerate.aliyuncs.com/pic/%E7%89%B9%E6%AE%8A%E4%BD%BF%E5%91%BD.jpg",
         notSupportedMessage: "此视频暂无法播放，请稍后再试",
         aspectRatio: "16:9", // 将播放器置于流畅模式，并在计算播放器的动态大小时使用该值。值应该代表一个比例 - 用冒号分隔的两个数字（例如"16:9"或"4:3"）
         fluid: true // 当true时，Video.js player将拥有流体大小。换句话说，它将按比例缩放以适应其容器。

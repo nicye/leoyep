@@ -30,10 +30,10 @@
 </template>
 <script>
 const imgMap = {
-  bgHome: "//leoyep.oss-cn-shanghai.aliyuncs.com/pic/bg1.jpg",
-  bg3d: "//leoyep.oss-cn-shanghai.aliyuncs.com/pic/bg2.jpg",
-  bgFooter: "//leoyep.oss-cn-shanghai.aliyuncs.com/pic/bg2-1.jpg",
-  logo: "//leoyep.oss-cn-shanghai.aliyuncs.com/pic/logo.gif"
+  bgHome: "//leoyep.oss-accelerate.aliyuncs.com/pic/bg1.jpg",
+  bg3d: "//leoyep.oss-accelerate.aliyuncs.com/pic/bg2.jpg",
+  bgFooter: "//leoyep.oss-accelerate.aliyuncs.com/pic/bg2-1.jpg",
+  logo: "//leoyep.oss-accelerate.aliyuncs.com/pic/logo.gif"
 };
 export default {
   data() {

@@ -24,22 +24,22 @@ export default {
             {
               type: "image",
               value:
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/3d/3d1.jpg?x-oss-process=style/water"
+                "//leoyep.oss-accelerate.aliyuncs.com/3d/3d1.jpg?x-oss-process=style/water"
             },
             {
               type: "image",
               value:
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/3d/3d2.jpg?x-oss-process=style/water"
+                "//leoyep.oss-accelerate.aliyuncs.com/3d/3d2.jpg?x-oss-process=style/water"
             },
             {
               type: "video",
               value:
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/3d/1586927989747428.mp4"
+                "//leoyep.oss-accelerate.aliyuncs.com/3d/1586927989747428.mp4"
             },
             {
               type: "video",
               value:
-                "//leoyep.oss-cn-shanghai.aliyuncs.com/3d/1586928018648983.mp4"
+                "//leoyep.oss-accelerate.aliyuncs.com/3d/1586928018648983.mp4"
             }
           ]
         }

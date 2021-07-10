@@ -2,7 +2,7 @@
   <div class="home">
     <HelloWorld msg="Portfolio｜作品集 By Jurna Liu" />
     <div>
-      <el-image src="//leoyep.oss-cn-shanghai.aliyuncs.com/pic/fatbi.jpg" />
+      <el-image src="//leoyep.oss-accelerate.aliyuncs.com/pic/fatbi.jpg" />
     </div>
   </div>
 </template>
