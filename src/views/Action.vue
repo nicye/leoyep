@@ -24,12 +24,12 @@ export default {
             {
               type: "image",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/3d/3d1.jpg?x-oss-process=style/water"
+                "//leoyep.oss-accelerate.aliyuncs.com/3d/3d1.jpg?x-oss-process=style/jurna"
             },
             {
               type: "image",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/3d/3d2.jpg?x-oss-process=style/water"
+                "//leoyep.oss-accelerate.aliyuncs.com/3d/3d2.jpg?x-oss-process=style/jurna"
             },
             {
               type: "video",

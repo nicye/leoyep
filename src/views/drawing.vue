@@ -24,17 +24,17 @@ export default {
             {
               type: "image",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/drawing/shuhui/shuhui1.png?x-oss-process=style/water"
+                "//leoyep.oss-accelerate.aliyuncs.com/drawing/shuhui/shuhui1.png?x-oss-process=style/jurna"
             },
             {
               type: "image",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/drawing/shuhui/shuhui2.png?x-oss-process=style/water"
+                "//leoyep.oss-accelerate.aliyuncs.com/drawing/shuhui/shuhui2.png?x-oss-process=style/jurna"
             },
             {
               type: "image",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/drawing/shuhui/shuhui3.jpg?x-oss-process=style/water"
+                "//leoyep.oss-accelerate.aliyuncs.com/drawing/shuhui/shuhui3.jpg?x-oss-process=style/jurna"
             }
           ]
         },
@@ -44,22 +44,22 @@ export default {
             {
               type: "image",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/drawing/shouhui/handhui1.jpg?x-oss-process=style/water"
+                "//leoyep.oss-accelerate.aliyuncs.com/drawing/shouhui/handhui1.jpg?x-oss-process=style/jurna"
             },
             {
               type: "image",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/drawing/shouhui/handhui2.jpg?x-oss-process=style/water"
+                "//leoyep.oss-accelerate.aliyuncs.com/drawing/shouhui/handhui2.jpg?x-oss-process=style/jurna"
             },
             {
               type: "image",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/drawing/shouhui/handhui3.jpg?x-oss-process=style/water"
+                "//leoyep.oss-accelerate.aliyuncs.com/drawing/shouhui/handhui3.jpg?x-oss-process=style/jurna"
             },
             {
               type: "image",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/drawing/shouhui/handhui4.jpg?x-oss-process=style/water"
+                "//leoyep.oss-accelerate.aliyuncs.com/drawing/shouhui/handhui4.jpg?x-oss-process=style/jurna"
             }
           ]
         },
@@ -69,12 +69,12 @@ export default {
             {
               type: "image",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/drawing/comic/1.jpg?x-oss-process=style/water"
+                "//leoyep.oss-accelerate.aliyuncs.com/drawing/comic/1.jpg?x-oss-process=style/jurna"
             },
             {
               type: "image",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/drawing/comic/2.jpg?x-oss-process=style/water"
+                "//leoyep.oss-accelerate.aliyuncs.com/drawing/comic/2.jpg?x-oss-process=style/jurna"
             }
           ]
         }

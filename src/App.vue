@@ -14,8 +14,8 @@
         <div :class="{ 'nav-fixed-to-top': fixed, nav: true }">
           <router-link to="/">首页</router-link>
           <router-link to="/project">项目</router-link>
-          <router-link to="/drawing">绘图</router-link>
-          <router-link to="/3d">三维</router-link>
+          <router-link to="/drawing">个人绘画作品</router-link>
+          <router-link to="/3d">3D</router-link>
         </div>
       </div>
     </transition>
@@ -33,8 +33,7 @@ const imgMap = {
   bgHome: "//leoyep.oss-accelerate.aliyuncs.com/pic/bg1.jpg",
   bg3d: "//leoyep.oss-accelerate.aliyuncs.com/pic/bg2.jpg",
   bgFooter: "//leoyep.oss-accelerate.aliyuncs.com/pic/bg2-1.jpg",
-  logo:
-    "//leoyep.oss-accelerate.aliyuncs.com/jurna.gif?versionId=CAEQJhiBgICC9ePP1BciIDViZGNmMzExNTQ5MzRjNGZhNzFkNzk4MjNjMjljOWRk"
+  logo: "//leoyep.oss-accelerate.aliyuncs.com/jurna (1).gif"
 };
 export default {
   data() {

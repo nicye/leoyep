@@ -21,10 +21,14 @@
         v-else-if="item.type == 'video'"
         :key="item.value"
         :src="item.value"
-        preload="true"
+        preload="metadata"
         style="width: 100%"
         type="video/mp4"
         crossorigin="anonymous"
+        :poster="
+          item.value +
+          '?x-oss-process=video/snapshot,t_7000,f_jpg,w_800,h_600,m_fast'
+        "
         controls
       ></video-player>
       <picture-player
@@ -44,20 +48,20 @@ export default {
   props: {
     title: {
       type: String,
-      default: ""
+      default: "",
     },
     data: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
     lazy: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   data() {
     return {};
-  }
+  },
 };
 </script>
 <style lang="scss" scoped>
