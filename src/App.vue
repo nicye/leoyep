@@ -33,7 +33,8 @@ const imgMap = {
   bgHome: "//leoyep.oss-accelerate.aliyuncs.com/pic/bg1.jpg",
   bg3d: "//leoyep.oss-accelerate.aliyuncs.com/pic/bg2.jpg",
   bgFooter: "//leoyep.oss-accelerate.aliyuncs.com/pic/bg2-1.jpg",
-  logo: "//leoyep.oss-accelerate.aliyuncs.com/pic/logo.gif"
+  logo:
+    "//leoyep.oss-accelerate.aliyuncs.com/jurna.gif?versionId=CAEQJhiBgICC9ePP1BciIDViZGNmMzExNTQ5MzRjNGZhNzFkNzk4MjNjMjljOWRk"
 };
 export default {
   data() {
