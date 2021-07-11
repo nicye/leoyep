@@ -247,10 +247,31 @@ export default {
             },
           ],
         },
-        // {
-        //   title: "节选A",
-        //   data: [],
-        // },
+        {
+          title: "节选A",
+          data: [
+            {
+              type: "image",
+              value:
+                "//leoyep.oss-accelerate.aliyuncs.com/jx/jx2.jpg?x-oss-process=style/jurna",
+            },
+            {
+              type: "image",
+              value:
+                "//leoyep.oss-accelerate.aliyuncs.com/jx/jx3.jpg?x-oss-process=style/jurna",
+            },
+            {
+              type: "image",
+              value:
+                "//leoyep.oss-accelerate.aliyuncs.com/jx/jx4.JPG?x-oss-process=style/jurna",
+            },
+            {
+              type: "video",
+              value:
+                "//leoyep.oss-accelerate.aliyuncs.com/jx/storyboard1-2.mp4",
+            },
+          ],
+        },
         {
           title: "Others",
           data: [
@@ -310,11 +331,11 @@ export default {
     }
     &-content {
       height: 25rem;
-      background-position: center;
+      background-position: center right;
       background-repeat: no-repeat;
-      background-size: 200% auto;
+      background-size: auto 300%;
       &-mask {
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(9, 30, 50, 0.5);
         width: 100%;
         height: 100%;
         display: flex;
