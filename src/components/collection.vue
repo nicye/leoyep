@@ -21,10 +21,10 @@
         v-else-if="item.type == 'video'"
         :key="item.value"
         :src="item.value"
-        preload="auto"
+        preload="true"
         style="width: 100%"
         type="video/mp4"
-        crossorigin="use-credentials"
+        crossorigin="anonymous"
         controls
       ></video-player>
       <picture-player
