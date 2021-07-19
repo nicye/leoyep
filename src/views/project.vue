@@ -312,7 +312,7 @@ export default {
     overflow: hidden;
     border: 1rem solid #000;
     border-radius: 10px;
-    margin: 50px 10vw;
+    margin: 30px 5vw;
     background-color: #000;
 
     // line-height: 2.2rem;
@@ -323,7 +323,7 @@ export default {
       border-radius: 10px;
       font-size: 18px;
       font-weight: 600;
-      height: 2.2rem;
+      height: 2rem;
       line-height: 2.2rem;
       display: inline-block;
       margin: 5px;
@@ -352,8 +352,8 @@ export default {
   .works-dialog {
     .works {
       background: #000;
-      padding: 0 10vw;
-      height: 100%;
+      padding: 2vw 5vw;
+      height: 100vh;
       overflow-y: auto;
     }
     .el-dialog__header {
@@ -361,6 +361,9 @@ export default {
     }
     .el-dialog__body {
       padding: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
     }
   }
 }

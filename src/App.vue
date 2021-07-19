@@ -11,11 +11,11 @@
     </div>
     <transition name="el-fade-in-linear">
       <div ref="nav" id="nav">
-        <div :class="{ 'nav-fixed-to-top': fixed, nav: true }">
-          <router-link to="/">首页</router-link>
-          <router-link to="/project">项目</router-link>
-          <router-link to="/drawing">个人绘画作品</router-link>
-          <router-link to="/3d">3D</router-link>
+        <div :class="{ nav: true }">
+          <a href="#/">首页</a>
+          <a href="#/project">项目</a>
+          <a href="#/drawing">个人绘画作品</a>
+          <a href="#/3d">3D</a>
         </div>
       </div>
     </transition>
@@ -33,7 +33,7 @@ const imgMap = {
   bgHome: "//leoyep.oss-accelerate.aliyuncs.com/pic/bg1.jpg",
   bg3d: "//leoyep.oss-accelerate.aliyuncs.com/pic/bg2.jpg",
   bgFooter: "//leoyep.oss-accelerate.aliyuncs.com/pic/bg2-1.jpg",
-  logo: "//leoyep.oss-accelerate.aliyuncs.com/jurna (1).gif"
+  logo: "//leoyep.oss-accelerate.aliyuncs.com/jurna (1).gif",
 };
 export default {
   data() {
@@ -42,14 +42,14 @@ export default {
       logo: imgMap.logo,
       bgMap: {
         Home: {
-          bg: imgMap.bgHome
+          bg: imgMap.bgHome,
         },
         "3d": {
           bg: imgMap.bg3d,
-          class: "yellow"
-        }
+          class: "yellow",
+        },
       },
-      fixed: false
+      fixed: false,
     };
   },
   computed: {
@@ -61,7 +61,7 @@ export default {
     },
     img() {
       return this.bgItem.class || "";
-    }
+    },
   },
   mounted() {
     // const toTop = () => {
@@ -77,7 +77,7 @@ export default {
     // };
     // toTop();
     // window.addEventListener("scroll", toTop);
-  }
+  },
 };
 </script>
 <style lang="scss">
@@ -124,34 +124,14 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  a{text-decoration: none;}    //这个是设置a标签的默认状态去除下划线
+a:visited{text-decoration: none;}    //这个是设置a标签的访问过后的状态去除下划线
+a:hover {text-decoration: none;}    //这个是设置a标签的鼠标覆盖状态去除下划线
+a:active{text-decoration:none;}  
   a {
     font-weight: bold;
     color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-
-.nav-fixed-to-top {
-  position: fixed;
-  top: 0;
-  // left: 10vw;
-  // right: 10vw;
-  z-index: 999;
-  flex-direction: column;
-  border-radius: 30px;
-  right: 0;
-  height: 40vh;
-  top: 20vh;
-  width: 32px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    margin: 10px 0px;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+      //这个是设置a标签的活跃状态去除下划线
   }
 }
 </style>

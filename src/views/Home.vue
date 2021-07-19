@@ -5,6 +5,7 @@
     </div>
     <div>
       <el-image
+        style="width: 30vw"
         src="//leoyep.oss-accelerate.aliyuncs.com/IMG_5948.jpg?versionId=CAEQJhiBgIDFn4nY1BciIGQ2YzcyZTg4ODgwYjRlNDA4MGVkMjM5NDgxZWI5NmMy"
       />
     </div>
