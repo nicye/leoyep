@@ -32,7 +32,7 @@
         <collection :title="works.title" :data="works.data" />
         <div
           class="el-backtop"
-          style="right: 0px; bottom: 250px"
+          style="left: 5px; top: 5px"
           @click="dialogVisible = false"
         >
           <i class="el-icon-back"></i>
@@ -351,15 +351,16 @@ export default {
   }
   .works-dialog {
     .works {
-      background: #000;
+      margin-top: 35px;
       padding: 2vw 5vw;
-      height: 100vh;
+      height: calc(100vh - 35px);
       overflow-y: auto;
     }
     .el-dialog__header {
       padding: 0;
     }
     .el-dialog__body {
+      background: #000;
       padding: 0;
       width: 100vw;
       height: 100vh;
