@@ -11,6 +11,7 @@
         :key="item.value"
         style="width: 100%"
         :src="item.value"
+        fit="cover"
         :lazy="lazy"
       >
         <div slot="placeholder" class="collention-image-slot">
@@ -37,6 +38,18 @@
         :srcs="item.value"
         :lazy="lazy"
       />
+      <iframe
+        v-else-if="item.type == 'iframe'"
+        :key="item.value"
+        :src="item.value"
+        width="560"
+        height="315"
+        :style="{ width: '100%', minHeight: '50.6vw' }"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        framespacing="0"
+        allowfullscreen="true"
+      ></iframe>
     </template>
   </div>
 </template>
@@ -79,6 +92,7 @@ export default {
     margin: 5px;
     padding: 0 10px;
   }
+
   &-image-slot {
     width: 100%;
     text-align: center;

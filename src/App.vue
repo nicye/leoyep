@@ -1,5 +1,10 @@
 <template>
-  <div ref="app" id="app" :class="[img]" :style="{ 'background-image': `url(${bg})` }">
+  <div
+    ref="app"
+    id="app"
+    :class="[img]"
+    :style="{ 'background-image': `url(${bg})` }"
+  >
     <transition name="el-fade-in-linear"> </transition>
     <div style="text-align: center">
       <img alt="Vue logo" class="logo-img" :src="logo" />
@@ -183,4 +188,5 @@ body {
     color: #2c3e50;
     //这个是设置a标签的活跃状态去除下划线
   }
-}</style>
+}
+</style>

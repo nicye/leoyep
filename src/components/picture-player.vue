@@ -1,6 +1,7 @@
 <template>
   <div class="my-picture-player">
     <el-image
+      fit="cover"
       :src="srcs[index]"
       style="width: 100%"
       :preview-src-list="previewSrcList"
