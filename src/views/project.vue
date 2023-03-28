@@ -1,5 +1,53 @@
 <template>
   <div class="project">
+    <iframe
+      class="iframe-item"
+      width="560"
+      height="315"
+      :style="{ width: '90vw', height: '50.6vw' }"
+      src="https://www.youtube.com/embed/dIV80ZPvgkQ"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+    <iframe
+      class="iframe-item"
+      width="560"
+      height="315"
+      :style="{ width: '90vw', height: '50.6vw' }"
+      src="https://www.youtube.com/embed/pEpr0VhY0Y8"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+    <iframe
+      class="iframe-item"
+      width="560"
+      height="315"
+      :style="{ width: '90vw', height: '50.6vw' }"
+      src="//player.bilibili.com/player.html?aid=777748054&bvid=BV1R14y1u7ot&cid=961335758&page=1"
+      scrolling="no"
+      border="0"
+      frameborder="no"
+      framespacing="0"
+      allowfullscreen="true"
+    >
+    </iframe>
+    <iframe
+      class="iframe-item"
+      width="560"
+      height="315"
+      :style="{ width: '90vw', height: '50.6vw' }"
+      src="//player.bilibili.com/player.html?aid=817951464&bvid=BV16G4y1V7C3&cid=1030988247&page=1"
+      scrolling="no"
+      border="0"
+      frameborder="no"
+      framespacing="0"
+      allowfullscreen="true"
+    >
+    </iframe>
     <div
       class="project-item"
       v-for="item in story"
@@ -12,7 +60,7 @@
       <div
         class="project-item-content"
         :style="{
-          'background-image': `url(${item.data[0].value})`,
+          'background-image': `url(${item.data[0].value})`
         }"
       >
         <div class="project-item-content-mask">
@@ -50,7 +98,7 @@ export default {
   name: "project",
   components: {
     // videoPlayer,
-    collection,
+    collection
   },
   data() {
     return {
@@ -62,23 +110,23 @@ export default {
             {
               type: "image",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/dxjt/dxjt2.png?x-oss-process=style/jurna",
+                "//leoyep.oss-accelerate.aliyuncs.com/dxjt/dxjt2.png?x-oss-process=style/jurna"
             },
             {
               type: "image",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/dxjt/dxjt1.png?x-oss-process=style/jurna",
+                "//leoyep.oss-accelerate.aliyuncs.com/dxjt/dxjt1.png?x-oss-process=style/jurna"
             },
             {
               type: "video",
-              value: "//leoyep.oss-accelerate.aliyuncs.com/dxjt/dxjt.mp4", // url地址
+              value: "//leoyep.oss-accelerate.aliyuncs.com/dxjt/dxjt.mp4" // url地址
             },
             {
               type: "image",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/dxjt/dxjt3.png?x-oss-process=style/jurna",
-            },
-          ],
+                "//leoyep.oss-accelerate.aliyuncs.com/dxjt/dxjt3.png?x-oss-process=style/jurna"
+            }
+          ]
         },
         {
           title: "神墙的故事",
@@ -86,34 +134,34 @@ export default {
             {
               type: "image",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/sqd/sqd.jpg?x-oss-process=style/jurna",
+                "//leoyep.oss-accelerate.aliyuncs.com/sqd/sqd.jpg?x-oss-process=style/jurna"
             },
             {
               type: "image",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/sqd/sqd2.jpg?x-oss-process=style/jurna",
+                "//leoyep.oss-accelerate.aliyuncs.com/sqd/sqd2.jpg?x-oss-process=style/jurna"
             },
             {
               type: "image",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/sqd/sqd3.jpg?x-oss-process=style/jurna",
+                "//leoyep.oss-accelerate.aliyuncs.com/sqd/sqd3.jpg?x-oss-process=style/jurna"
             },
             {
               type: "image",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/sqd/sqd4.jpg?x-oss-process=style/jurna",
+                "//leoyep.oss-accelerate.aliyuncs.com/sqd/sqd4.jpg?x-oss-process=style/jurna"
             },
             {
               type: "image",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/sqd/sqd5.jpg?x-oss-process=style/jurna",
+                "//leoyep.oss-accelerate.aliyuncs.com/sqd/sqd5.jpg?x-oss-process=style/jurna"
             },
             {
               type: "image",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/sqd/sqd6.jpg?x-oss-process=style/jurna",
-            },
-          ],
+                "//leoyep.oss-accelerate.aliyuncs.com/sqd/sqd6.jpg?x-oss-process=style/jurna"
+            }
+          ]
         },
         {
           title: "car",
@@ -121,13 +169,13 @@ export default {
             {
               type: "image",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/car/car.jpg?x-oss-process=style/jurna",
+                "//leoyep.oss-accelerate.aliyuncs.com/car/car.jpg?x-oss-process=style/jurna"
             },
             {
               type: "video",
-              value: "//leoyep.oss-accelerate.aliyuncs.com/car/carmusic.mp4", // url地址
-            },
-          ],
+              value: "//leoyep.oss-accelerate.aliyuncs.com/car/carmusic.mp4" // url地址
+            }
+          ]
         },
 
         {
@@ -136,11 +184,11 @@ export default {
             {
               type: "image",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/flight/Fight.jpg?x-oss-process=style/jurna",
+                "//leoyep.oss-accelerate.aliyuncs.com/flight/Fight.jpg?x-oss-process=style/jurna"
             },
             {
               type: "video",
-              value: "//leoyep.oss-accelerate.aliyuncs.com/flight/flight.mp4", // url地址
+              value: "//leoyep.oss-accelerate.aliyuncs.com/flight/flight.mp4" // url地址
             },
             {
               type: "imageList",
@@ -159,10 +207,10 @@ export default {
                 "//leoyep.oss-accelerate.aliyuncs.com/flight/ketchs-1-12.jpg?x-oss-process=style/jurna",
                 "//leoyep.oss-accelerate.aliyuncs.com/flight/ketchs-1-13.jpg?x-oss-process=style/jurna",
                 "//leoyep.oss-accelerate.aliyuncs.com/flight/ketchs-1-14.jpg?x-oss-process=style/jurna",
-                "//leoyep.oss-accelerate.aliyuncs.com/flight/ketchs-1-15.jpg?x-oss-process=style/jurna",
-              ], // url地址
-            },
-          ],
+                "//leoyep.oss-accelerate.aliyuncs.com/flight/ketchs-1-15.jpg?x-oss-process=style/jurna"
+              ] // url地址
+            }
+          ]
         },
         {
           title: "特殊使命",
@@ -170,11 +218,11 @@ export default {
             {
               type: "image",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/tes/tes.jpg?x-oss-process=style/jurna",
+                "//leoyep.oss-accelerate.aliyuncs.com/tes/tes.jpg?x-oss-process=style/jurna"
             },
             {
               type: "video",
-              value: "//leoyep.oss-accelerate.aliyuncs.com/tes/tes1.mp4", // url地址
+              value: "//leoyep.oss-accelerate.aliyuncs.com/tes/tes1.mp4" // url地址
             },
             {
               type: "imageList",
@@ -185,18 +233,18 @@ export default {
                 "//leoyep.oss-accelerate.aliyuncs.com/tes/sketch4-1-4.jpg?x-oss-process=style/jurna",
                 "//leoyep.oss-accelerate.aliyuncs.com/tes/sketch4-1-5.jpg?x-oss-process=style/jurna",
                 "//leoyep.oss-accelerate.aliyuncs.com/tes/sketch4-1-6.jpg?x-oss-process=style/jurna",
-                "//leoyep.oss-accelerate.aliyuncs.com/tes/sketch4-1-7.jpg?x-oss-process=style/jurna",
-              ],
+                "//leoyep.oss-accelerate.aliyuncs.com/tes/sketch4-1-7.jpg?x-oss-process=style/jurna"
+              ]
             },
             {
               type: "video", // 类型
-              value: "//leoyep.oss-accelerate.aliyuncs.com/tes/tes2.mp4",
+              value: "//leoyep.oss-accelerate.aliyuncs.com/tes/tes2.mp4"
             },
             {
               type: "video", // 类型
-              value: "//leoyep.oss-accelerate.aliyuncs.com/tes/tes3.mp4",
-            },
-          ],
+              value: "//leoyep.oss-accelerate.aliyuncs.com/tes/tes3.mp4"
+            }
+          ]
         },
         {
           title: "不会忘记",
@@ -204,13 +252,13 @@ export default {
             {
               type: "image",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/grandma/grandma.jpg?x-oss-process=style/jurna",
+                "//leoyep.oss-accelerate.aliyuncs.com/grandma/grandma.jpg?x-oss-process=style/jurna"
             },
             {
               type: "video",
-              value: "//leoyep.oss-accelerate.aliyuncs.com/grandma/grandma.mp4", // url地址
-            },
-          ],
+              value: "//leoyep.oss-accelerate.aliyuncs.com/grandma/grandma.mp4" // url地址
+            }
+          ]
         },
         {
           title: "封神",
@@ -218,19 +266,19 @@ export default {
             {
               type: "image",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/IMG_5961.PNG?x-oss-process=style/jurna",
+                "//leoyep.oss-accelerate.aliyuncs.com/IMG_5961.PNG?x-oss-process=style/jurna"
             },
             {
               type: "image",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/share.jpg?x-oss-process=style/jurna",
+                "//leoyep.oss-accelerate.aliyuncs.com/share.jpg?x-oss-process=style/jurna"
             },
             {
               type: "video",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/c807b6a60820a2c868a11246e05c413e_11893225320976222672.mp4",
-            },
-          ],
+                "//leoyep.oss-accelerate.aliyuncs.com/c807b6a60820a2c868a11246e05c413e_11893225320976222672.mp4"
+            }
+          ]
         },
         {
           title: "天将神龙",
@@ -238,14 +286,14 @@ export default {
             {
               type: "image",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/tjsl/%E6%9C%AA%E6%A0%87%E9%A2%98-1.jpg?x-oss-process=style/jurna",
+                "//leoyep.oss-accelerate.aliyuncs.com/tjsl/%E6%9C%AA%E6%A0%87%E9%A2%98-1.jpg?x-oss-process=style/jurna"
             },
             {
               type: "video",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/408e128c9e3fb9ae7573b7365cf1484d_14058486732207301026.mp4",
-            },
-          ],
+                "//leoyep.oss-accelerate.aliyuncs.com/408e128c9e3fb9ae7573b7365cf1484d_14058486732207301026.mp4"
+            }
+          ]
         },
         {
           title: "节选A",
@@ -253,24 +301,23 @@ export default {
             {
               type: "image",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/jx/jx2.jpg?x-oss-process=style/jurna",
+                "//leoyep.oss-accelerate.aliyuncs.com/jx/jx2.jpg?x-oss-process=style/jurna"
             },
             {
               type: "image",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/jx/jx3.jpg?x-oss-process=style/jurna",
+                "//leoyep.oss-accelerate.aliyuncs.com/jx/jx3.jpg?x-oss-process=style/jurna"
             },
             {
               type: "image",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/jx/jx4.JPG?x-oss-process=style/jurna",
+                "//leoyep.oss-accelerate.aliyuncs.com/jx/jx4.JPG?x-oss-process=style/jurna"
             },
             {
               type: "video",
-              value:
-                "//leoyep.oss-accelerate.aliyuncs.com/jx/storyboard1-2.mp4",
-            },
-          ],
+              value: "//leoyep.oss-accelerate.aliyuncs.com/jx/storyboard1-2.mp4"
+            }
+          ]
         },
         {
           title: "Others",
@@ -278,16 +325,16 @@ export default {
             {
               type: "image",
               value:
-                "//leoyep.oss-accelerate.aliyuncs.com/others/others.jpg?x-oss-process=style/jurna",
+                "//leoyep.oss-accelerate.aliyuncs.com/others/others.jpg?x-oss-process=style/jurna"
             },
             {
               type: "video",
-              value: "//leoyep.oss-accelerate.aliyuncs.com/others/others.mp4",
-            },
-          ],
-        },
+              value: "//leoyep.oss-accelerate.aliyuncs.com/others/others.mp4"
+            }
+          ]
+        }
       ],
-      works: {},
+      works: {}
     };
   },
   methods: {
@@ -295,18 +342,22 @@ export default {
       window.sessionStorage.setItem(
         "LEO_WORKS_PIESE",
         JSON.stringify({
-          ...works,
+          ...works
         })
       );
       this.works = works;
       this.dialogVisible = true;
 
       // this.$router.push("/works");
-    },
-  },
+    }
+  }
 };
 </script>
 <style lang="scss">
+.iframe-item {
+  margin: 30px 5vw;
+}
+
 .project {
   &-item {
     overflow: hidden;
@@ -329,11 +380,13 @@ export default {
       margin: 5px;
       padding: 0 10px;
     }
+
     &-content {
       height: 25rem;
       background-position: center right;
       background-repeat: no-repeat;
       background-size: auto 300%;
+
       &-mask {
         background-color: rgba(9, 30, 50, 0.5);
         width: 100%;
@@ -341,6 +394,7 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
+
         .el-icon-video-play {
           font-size: 60px;
           background-color: #fff;
@@ -349,6 +403,7 @@ export default {
       }
     }
   }
+
   .works-dialog {
     .works {
       margin-top: 35px;
@@ -356,9 +411,11 @@ export default {
       height: calc(100vh - 35px);
       overflow-y: auto;
     }
+
     .el-dialog__header {
       padding: 0;
     }
+
     .el-dialog__body {
       background: #000;
       padding: 0;

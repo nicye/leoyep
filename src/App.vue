@@ -1,10 +1,5 @@
 <template>
-  <div
-    ref="app"
-    id="app"
-    :class="[img]"
-    :style="{ 'background-image': `url(${bg})` }"
-  >
+  <div ref="app" id="app" :class="[img]" :style="{ 'background-image': `url(${bg})` }">
     <transition name="el-fade-in-linear"> </transition>
     <div style="text-align: center">
       <img alt="Vue logo" class="logo-img" :src="logo" />
@@ -33,7 +28,7 @@ const imgMap = {
   bgHome: "//leoyep.oss-accelerate.aliyuncs.com/pic/bg1.jpg",
   bg3d: "//leoyep.oss-accelerate.aliyuncs.com/pic/bg2.jpg",
   bgFooter: "//leoyep.oss-accelerate.aliyuncs.com/pic/bg2-1.jpg",
-  logo: "//leoyep.oss-accelerate.aliyuncs.com/jurna (1).gif",
+  logo: "//leoyep.oss-accelerate.aliyuncs.com/jurna (1).gif"
 };
 export default {
   data() {
@@ -42,14 +37,14 @@ export default {
       logo: imgMap.logo,
       bgMap: {
         Home: {
-          bg: imgMap.bgHome,
+          bg: imgMap.bgHome
         },
         "3d": {
           bg: imgMap.bg3d,
-          class: "yellow",
-        },
+          class: "yellow"
+        }
       },
-      fixed: false,
+      fixed: false
     };
   },
   computed: {
@@ -61,7 +56,7 @@ export default {
     },
     img() {
       return this.bgItem.class || "";
-    },
+    }
   },
   mounted() {
     // const toTop = () => {
@@ -77,18 +72,53 @@ export default {
     // };
     // toTop();
     // window.addEventListener("scroll", toTop);
-  },
+  }
 };
 </script>
 <style lang="scss">
-html {
-  font-size: 16px;
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 14px;
+  }
 }
+
+@media screen and (min-width: 360px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 440px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  html {
+    font-size: 28px;
+  }
+}
+
 body {
   min-height: 100%;
 }
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
@@ -96,6 +126,7 @@ body {
   background-position: 0 0;
   background-repeat: no-repeat;
   min-height: 100vh;
+
   .logo-img {
     width: 60vw;
     margin: 2vw auto 0;
@@ -112,26 +143,44 @@ body {
     z-index: -2;
   }
 }
+
 .yellow {
   background: rgb(238, 231, 211);
 }
+
 #nav {
   margin: 0 10vw;
 }
+
 .nav {
   background: #fff;
   padding: 10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  a{text-decoration: none;}    //这个是设置a标签的默认状态去除下划线
-a:visited{text-decoration: none;}    //这个是设置a标签的访问过后的状态去除下划线
-a:hover {text-decoration: none;}    //这个是设置a标签的鼠标覆盖状态去除下划线
-a:active{text-decoration:none;}  
+
+  a {
+    text-decoration: none;
+  }
+
+  //这个是设置a标签的默认状态去除下划线
+  a:visited {
+    text-decoration: none;
+  }
+
+  //这个是设置a标签的访问过后的状态去除下划线
+  a:hover {
+    text-decoration: none;
+  }
+
+  //这个是设置a标签的鼠标覆盖状态去除下划线
+  a:active {
+    text-decoration: none;
+  }
+
   a {
     font-weight: bold;
     color: #2c3e50;
-      //这个是设置a标签的活跃状态去除下划线
+    //这个是设置a标签的活跃状态去除下划线
   }
-}
-</style>
+}</style>

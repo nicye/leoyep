@@ -27,7 +27,7 @@
         crossorigin="anonymous"
         :poster="
           item.value +
-          '?x-oss-process=video/snapshot,t_7000,f_jpg,w_800,h_600,m_fast'
+            '?x-oss-process=video/snapshot,t_7000,f_jpg,w_800,h_600,m_fast'
         "
         controls
       ></video-player>
@@ -48,20 +48,20 @@ export default {
   props: {
     title: {
       type: String,
-      default: "",
+      default: ""
     },
     data: {
       type: Array,
-      default: () => [],
+      default: () => []
     },
     lazy: {
       type: Boolean,
-      default: false,
-    },
+      default: false
+    }
   },
   data() {
     return {};
-  },
+  }
 };
 </script>
 <style lang="scss" scoped>
