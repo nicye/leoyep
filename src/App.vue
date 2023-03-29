@@ -1,10 +1,5 @@
 <template>
-  <div
-    ref="app"
-    id="app"
-    :class="[img]"
-    :style="{ 'background-image': `url(${bg})` }"
-  >
+  <div ref="app" id="app" :class="[img]" :style="{ 'background-image': `url(${bg})` }">
     <transition name="el-fade-in-linear"> </transition>
     <div style="text-align: center">
       <img alt="Vue logo" class="logo-img" :src="logo" />
@@ -13,14 +8,23 @@
       <div ref="nav" id="nav">
         <div :class="{ nav: true }">
           <a href="#/">首页</a>
-          <a href="#/project">项目</a>
+          <a href="#/project">编导项目</a>
           <a href="#/drawing">个人绘画作品</a>
-          <a href="#/3d">3D</a>
+          <a href="#/3d">动画</a>
         </div>
       </div>
     </transition>
     <el-backtop :right="0" :bottom="150"></el-backtop>
+    <template v-for="it in data">
+      <div :key="it.title" style="position: fixed; top: -2000vh; left: -2000vw; z-index: -10;">
+        <template v-for="item in it.data">
+          <iframe v-if="item.type === 'iframe'" loading="eager" :src="item.value"
+            :key="item.value"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" />
+        </template>
+      </div>
 
+    </template>
     <keep-alive>
       <transition name="el-fade-in">
         <router-view></router-view>
@@ -29,6 +33,7 @@
   </div>
 </template>
 <script>
+import data from './assets/json/data.json';
 const imgMap = {
   bgHome: "//leoyep.oss-accelerate.aliyuncs.com/pic/bg1.jpg",
   bg3d: "//leoyep.oss-accelerate.aliyuncs.com/pic/bg2.jpg",
@@ -38,6 +43,7 @@ const imgMap = {
 export default {
   data() {
     return {
+      data,
       cc: 0,
       logo: imgMap.logo,
       bgMap: {
@@ -62,6 +68,9 @@ export default {
     img() {
       return this.bgItem.class || "";
     }
+  },
+  created() {
+
   },
   mounted() {
     // const toTop = () => {

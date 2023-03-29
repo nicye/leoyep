@@ -7,7 +7,7 @@
     </slot>
     <template v-for="item in data">
       <el-image
-        v-if="item.type == 'image'"
+        v-if="item.type == 'image' && !item.hide"
         :key="item.value"
         style="width: 100%"
         :src="item.value"

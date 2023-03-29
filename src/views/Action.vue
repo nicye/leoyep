@@ -19,7 +19,7 @@ export default {
     return {
       story: [
         {
-          title: "3D作品",
+          title: "动画作品",
           data: [
             {
               type: "image",

@@ -3,6 +3,7 @@
       "title": "部分广告成片",
       "data": [
         {
+          "hide": true,
           "type": "image",
           "value": "//leoyep.oss-cn-shanghai.aliyuncs.com/pic/WechatIMG330.jpeg?x-oss-process=style/jurna"
         },
